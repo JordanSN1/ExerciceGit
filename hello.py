@@ -1,5 +1,9 @@
 while True:
-    nombreUtilisateur = int(input("Entrez un nombre: "))
+    try:
+        nombreUtilisateur = int(input("Entrez un nombre: "))
+    except ValueError:
+        print("Veuillez entrer un nombre valide.")
+        continue
 
     for i in range(1, 11):
         print(f"{nombreUtilisateur} x {i} = {nombreUtilisateur * i}")
